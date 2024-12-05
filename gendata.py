@@ -3,7 +3,7 @@ import requests
 from datetime import datetime, timedelta
 from conn.conn_db import get_connection
 
-API_URL = "http://192.168.68.104:8000/api/api_fakeinfo/"
+API_URL = "http://20.242.123.84:8000/api/api_fakeinfo/"
 HEADERS = {'Content-Type': 'application/json'}
 
 dias_semana = {
@@ -132,4 +132,7 @@ def procesar_datos(fecha_inicio_str, fecha_fin_str, ciclo):
     print(f"Se registraron un total de {total_registros_global} fechas y horas para todos los carnets en el ciclo {ciclo} y el rango {fecha_inicio_str} a {fecha_fin_str}.")
 
 
-procesar_datos(fecha_inicio_str="19-01-2024", fecha_fin_str="21-06-2024", ciclo="Ciclo 01-2024")
+procesar_datos(fecha_inicio_str="19-01-2024", fecha_fin_str="11-06-2024", ciclo="Ciclo 01-2024")
+#procesar_datos(fecha_inicio_str="23-07-2024", fecha_fin_str="16-12-2024", ciclo="Ciclo 02-2024")
+#procesar_datos(fecha_inicio_str="19-01-2023", fecha_fin_str="11-06-2023", ciclo="Ciclo 01-2023")
+#procesar_datos(fecha_inicio_str="23-07-2023", fecha_fin_str="16-12-2023", ciclo="Ciclo 02-2023")
